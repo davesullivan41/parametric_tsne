@@ -5,6 +5,7 @@ This is a python package implementing parametric t-SNE. We train a neural-networ
 Simple example usage may be:
 
 ```python
+from parametric_tSNE import Parametric_tSNE
 train_data = load_training_data_somehow()
 high_dims = train_data.shape[1]
 num_outputs = 2
@@ -27,6 +28,7 @@ If one wants to use a different network architecture, one must specify the layer
 The neural network is implemented using Keras and Tensorflow, so layers should be specified using Keras:
 
 ```python
+from parametric_tSNE import Parametric_tSNE
 from tensorflow.contrib.keras import layers
 all_layers = [layers.Dense(10, input_shape=(high_dims,), activation='sigmoid', kernel_initializer='glorot_uniform'),
 layers.Dense(100, activation='sigmoid', kernel_initializer='glorot_uniform'),
